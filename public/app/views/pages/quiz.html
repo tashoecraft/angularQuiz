@@ -1,0 +1,29 @@
+<!-- showcase each question, the options which when clicked log the choice, and buttons to change question -->
+
+<div class="container-fluid ">
+
+        <div class="col-md-12 center-block ">
+                <div class="col-md-8 col-md-offset-2 row">
+                    <h4> {{main.loadQuestion()}}</h4>
+                </div>
+                <div class="col-md-6 col-md-offset-4">
+                    <div class="radio">
+                        <input id ="0" type="radio" name="answer" value="0" ng-click="main.check(0)">
+                        <p>{{main.loadChoice(0)}}</p>
+                        <input id ="1" type="radio" name="answer" value="1" ng-click="main.check(1)">
+                        <p>{{main.loadChoice(1)}}</p>
+                        <input id ="2" type="radio" name="answer" value="2" ng-click="main.check(2)">
+                        <p>{{main.loadChoice(2)}}</p>
+                        <input id ="3" type="radio" name="answer" value="3" ng-click="main.check(3)">
+                        <p>{{main.loadChoice(3)}}</p>
+                    </div>
+                </div>
+        </div>
+        <button class="btn btn-default col-md-1 col-md-offset-3" ng-click="main.decrease()">
+            <span class="glyphicon glyphicon-chevron-left" style="vertical-align:middle"></span>
+        </button>
+
+        <button class="btn btn-default col-md-1 col-md-offset-2" ng-click="main.increase()">
+            <span class="glyphicon glyphicon-chevron-right" style="vertical-align:middle"></span>
+        </button>
+</div>

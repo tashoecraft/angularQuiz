@@ -1,0 +1,32 @@
+<!-- Score page, shows final score, then three columns showing question #, the correct answer and the user's answers -->
+
+<div class="container-fluid">
+    <div class="col-md-12 vertical-center">
+        <div class="col-md-12 row">
+            <h4>Your Final Score is {{answer.score / 19 * 100}} %</h4>
+        </div>
+        <div class="col-md-12">
+            <p>You got {{answer.score}} out of 19 </p>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <p class="col-md-12">Question #</p>
+                <div class="col-md-12" ng-repeat="i in answer.getNumber(18) track by $index">
+                    {{$index + 1}}
+                </div>
+            </div>
+            <div class="col-md-5">
+                <p class="col-md-12">Correct Answer</p>
+                <div class="col-md-12" ng-repeat="answer in answer.corrects">
+                    {{answer}}
+                </div>
+            </div>
+            <div class="col-md-5">
+                <p class="col-md-12">Your Answer</p>
+                <div class="col-md-12" ng-repeat="userAnswer in answer.usersAnswers">
+                    {{userAnswer}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
